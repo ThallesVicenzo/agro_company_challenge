@@ -7,8 +7,8 @@ enum IconsEnum {
 
   final String name;
 
-  String get defaultPath => 'assets/icons/';
-  String get path => '$defaultPath$name';
+  String get _defaultPath => 'assets/icons/';
+  String get path => '$_defaultPath$name';
 
   File get file => File(path);
 }
