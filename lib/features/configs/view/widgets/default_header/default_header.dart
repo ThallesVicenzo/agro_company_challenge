@@ -1,3 +1,5 @@
+import 'package:agro_company_challenge/core/enums/icons_enum.dart';
+import 'package:agro_company_challenge/features/configs/view/widgets/icon/icon_widget.dart';
 import 'package:flutter/material.dart';
 
 class DefaultHeader extends StatelessWidget {
@@ -24,7 +26,6 @@ class DefaultHeader extends StatelessWidget {
       color: color,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Semantics(
             label: 'botão voltar',
@@ -46,8 +47,8 @@ class DefaultHeader extends StatelessWidget {
                   }
                 },
                 icon: const ExcludeSemantics(
-                  child: Icon(
-                    Icons.arrow_back,
+                  child: IconWidget(
+                    icon: IconsEnum.vector,
                   ),
                 ),
               ),
