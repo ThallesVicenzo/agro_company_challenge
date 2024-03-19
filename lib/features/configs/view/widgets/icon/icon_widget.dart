@@ -10,7 +10,6 @@ class IconWidget extends StatelessWidget {
   final Alignment alignment;
   final Color? color;
   final Color? backgroundColor;
-  final String? package;
   final VoidCallback? onTap;
   final BorderRadius? radius;
   final String? customPath;
@@ -19,11 +18,10 @@ class IconWidget extends StatelessWidget {
     super.key,
     required this.icon,
     this.onTap,
-    this.size = const Size(24, 24),
+    this.size = const Size(16, 16),
     this.fit = BoxFit.contain,
     this.alignment = Alignment.center,
     this.color = Colors.black,
-    this.package = 'design_system',
     this.customPath,
     this.radius,
     this.backgroundColor,
@@ -61,35 +59,10 @@ class IconWidget extends StatelessWidget {
               theme: SvgTheme(
                 currentColor: color ?? Colors.transparent,
               ),
-              package: package,
             ),
           ),
         ),
       ),
-    );
-  }
-
-  factory IconWidget.byPath({
-    required String path,
-    Size size = const Size(24, 24),
-    BoxFit fit = BoxFit.contain,
-    Alignment alignment = Alignment.center,
-    Color? color,
-    VoidCallback? onTap,
-    Color? backgroundColor,
-    final Size? backgroundSize,
-  }) {
-    return IconWidget(
-      icon: IconsEnum.vector,
-      customPath: path,
-      size: size,
-      fit: fit,
-      alignment: alignment,
-      package: 'design_system',
-      color: color,
-      onTap: onTap,
-      backgroundColor: backgroundColor,
-      backgroundSize: backgroundSize,
     );
   }
 }
