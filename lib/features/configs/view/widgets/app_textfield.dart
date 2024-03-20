@@ -20,10 +20,18 @@ class AppTextField extends StatelessWidget {
         const SizedBox(
           height: 5,
         ),
-        TextField(
-          decoration: InputDecoration(
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(5),
+        Container(
+          constraints: const BoxConstraints(
+            maxWidth: 200,
+            minWidth: 100,
+            maxHeight: 30,
+          ),
+          child: TextField(
+            textAlignVertical: TextAlignVertical.center,
+            decoration: InputDecoration(
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(5),
+              ),
             ),
           ),
         ),
